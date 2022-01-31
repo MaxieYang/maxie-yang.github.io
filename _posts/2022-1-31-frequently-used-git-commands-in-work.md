@@ -32,11 +32,12 @@ title: 工作中常用的Git命令
 ## 变更操作
 ### 变更工作区内容用git checkout  变更暂存区内容用git reset  
 
-*将暂存区的内容变回HEAD文件（用git diff --cached验证暂存区和HEAD的区别）*  
+*将暂存区的内容变回HEAD文件（用`git diff --cached`验证暂存区和HEAD的区别）*  
 `git reset HEAD`  
 
-*将工作区的指定文件变回暂存区内容（用git diff -- [<filename>] 验证工作区和暂存区的区别）*   
-`git checkout -- [<filename>...]`  
+*将工作区的指定文件变回暂存区内容*  
+*用`git diff -- [<filename...>]`验证工作区和暂存区的区别*
+`git checkout -- [<filename>...]`    
 
 *将暂存区的指定文件取消变更*  
 `git reset HEAD -- [<filename>]`  
