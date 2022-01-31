@@ -36,7 +36,7 @@ title: 工作中常用的Git命令
 `git reset HEAD`  
 
 *将工作区的指定文件变回暂存区内容*  
-*用`git diff -- [<filename...>]`验证工作区和暂存区的区别*
+*用`git diff -- [<filename...>]`验证工作区和暂存区的区别*  
 `git checkout -- [<filename>...]`    
 
 *将暂存区的指定文件取消变更*  
