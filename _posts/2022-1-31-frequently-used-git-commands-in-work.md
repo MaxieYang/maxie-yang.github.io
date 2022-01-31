@@ -50,5 +50,5 @@ title: 工作中常用的Git命令
 *将工作区内容暂时存放起来*  
 `git stash`
 
-*将存放到stash的内容取出并删除或只是取出*
+*将存放到stash的内容取出并删除或只是取出*  
 `git stash pop/apply`  
