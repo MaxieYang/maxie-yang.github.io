@@ -2,8 +2,11 @@
 layout: post
 title: 工作中常用的Git命令
 ---
-
-
+  
+  
+  
+  
+  
 ## 修改备注
 git commit --amend  修改最新提交的commit备注  
 git rebase -i <指定commit的父commit>  pick 不变，r为变更备注  
