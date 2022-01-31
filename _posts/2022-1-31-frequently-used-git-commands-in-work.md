@@ -5,9 +5,6 @@ title: 工作中常用的Git命令
 
 工作中常用的Git命令
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-
 
 修改备注
 git commit --amend  修改最新提交的commit备注
