@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 工作中常用的Git命令
+permalink: /frequently-used-git-commands-in-work/
 ---
   
 ## 修改备注
