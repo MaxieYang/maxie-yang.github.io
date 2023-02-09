@@ -54,3 +54,9 @@ permalink: /frequently-used-git-commands-in-work/
 
 *将存放到stash的内容取出并删除或只是取出*  
 `git stash pop/apply`  
+
+### git回退命令
+*撤销连续几个commit，-n表示不自动提交，都回退完之后统一一个commit push即可。
+*前开后闭，不包括f7742cd包括551c408*
+`git revert -n f7742cd..551c408 `
+
