@@ -10,7 +10,7 @@ Runner可以理解为是跑sonar分析的机器，我配在了某机器上。关
 
 ## 配置.gitlab-ci.yml
 
-```
+```yaml
 .sonar_scan_template:
   stage: SONAR_CODE_CHECK
   tags:
@@ -72,7 +72,7 @@ master_branch_merges:
 $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "test"（合并请求时目标分支为test） AND merge_requests（合并请求） AND except情况
 $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME == "master"（合并请求时目标分支为master）。翻译白话就是：当发起合并请求是，目标分支为test并且源分支不为master的时候，就触发test_branch_merges任务。
 
-```
+```yaml
 test_branch_merges:
   extends: .sonar_scan_template
   only:
@@ -88,7 +88,7 @@ test_branch_merges:
 
 extends字段其实就是把公用代码抽取成.sonar_scan_template，几个job能通过extends复用。
 
-```
+```yaml
 .sonar_scan_template:
   stage: SONAR_CODE_CHECK
   tags:
@@ -107,7 +107,7 @@ extends字段其实就是把公用代码抽取成.sonar_scan_template，几个jo
 
 	
 因为需要在每个服务都加上这个文件（有没有方便的方式能给每个服务每个分支都加上这个文件的方法，暂时没去查），不可能后期需要变更的时候每个服务的文件都需要改一遍，因此可以通过include字段来引用上面所说的文件，以便于后期维护CI。其代码如下，内容很简单不再赘述：
-```
+```yaml
 include:
 	- project: '***/devops/ci-templates'
 	  file: 'sonar-ci-template.yml'
