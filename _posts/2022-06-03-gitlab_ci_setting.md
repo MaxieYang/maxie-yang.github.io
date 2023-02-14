@@ -109,6 +109,6 @@ extends字段其实就是把公用代码抽取成.sonar_scan_template，几个jo
 因为需要在每个服务都加上这个文件（有没有方便的方式能给每个服务每个分支都加上这个文件的方法，暂时没去查），不可能后期需要变更的时候每个服务的文件都需要改一遍，因此可以通过include字段来引用上面所说的文件，以便于后期维护CI。其代码如下，内容很简单不再赘述：
 ```yaml
 include:
-	- project: '***/devops/ci-templates'
-	  file: 'sonar-ci-template.yml'
+    - project: '***/devops/ci-templates'
+      file: 'sonar-ci-template.yml'
 ```
